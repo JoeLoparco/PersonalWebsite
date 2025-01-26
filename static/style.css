@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    background-color: lightgrey;
+    color: #2f3b42;
+  }
+  
+  h1 {
+    text-align: center;
+    background-color: lightgrey;
+    color: #2f3b42;
+  }
+  
+  p {
+    text-indent: 40px;
+  }
+
+  div {
+    margin: auto;
+    text-align: left;
+    width: 75%;
+    padding: 25px 75px 50px 75px;
+    background-color: whitesmoke;
+    color: #2f3b42;
+    border-radius: 50px;
+  }
+  .projects {
+    margin-top: 100px;
+  }
+
+  .aboutMe {
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+  }
