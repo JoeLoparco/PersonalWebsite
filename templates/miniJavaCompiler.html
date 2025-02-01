@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joe's Website ~ MiniJavaCompiler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+    <h1>MiniJava Compiler</h1>
+        <p> Project Description: Implemented the first three phases of a compiler for Mini
+            Java in Java, a simpler subset of the Java language. This included the
+            construction of a Scanner (Tokenizer), Parser and Semantic Analyzer.
+            
+    <h2>Phase I - Tokenzier</h2>
+            <p> Implemented a process for scanning a MiniJava fIle and performing tokenization. On an abstract level we did this by building a state machine to represent a DFA(A finite automata where each state only has one out put for evey input). 
+                Went about implementing this state machine with the use of an enumerator to act as the current state, we then used a state table to map out all possible transtions based on char type. This allowed us to read in each character of the 
+                Java file  while pusing it onto a pushbackreader tracking the state until we reach an accept state(ideally one where we have a valid token) 
+                and then push back the characters stored in our reader to build out the corresponding token, then repeat this process till completed. 
+            `</p>
+    <h2>Phase II - Parser</h2>
+            <p> Implemented Parer for MiniJava. To achieve this we first created a Context Free Grammar(CFG) <A HREF="http://minijava.azurewebsites.net/ReferenceManual"> *MiniJava CFG can be found here*</A>
+                We did this via the use of Regualar Expressions in some places where the Grammar was not deterministic due to ambiguity we used a 'lookahead' to help enforce proper MiniJavaGrammar. This 
+                CFG allowed us to parse our previously tokenized output and built out the corresponding objects in our Abstarct Syntax Tree(AST) provided that our tokenized output was derived from gramtically correct 
+                MiniJava input. The result of this Porgram is an AST from which much of the meaning of our Language is derived.       
+            </p>
+    <h2>Phase III - TypeChecker*</h2>
+
+            <p> Implemented a Process For Performing Sematic Analysis. We Performed Type Chaking Scope Managment and Built Out the Symbol Table.  </p>
+
+            <h3>More info on the project below!</h3>
+
+           <h4><A HREF="https://www.cs.mu.edu/~jforden/Compilers/Fall2024.html">Course Website </A></h4>
+           <h4><A HREF="http://minijava.azurewebsites.net/ReferenceManual"> More on MiniJava</A></h4>
+           <h4><A HREF="https://github.com/JoeLoparco/MiniJava-Compiler"> GitHub Project(*Not Complete due to IP issues)</A></h4>
+            </div>
+        
+</body>
+</html>
