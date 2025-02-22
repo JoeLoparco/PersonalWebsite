@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Pixel Editor{% endblock %}
+
+{% block content %}
+<div id="pixel-editor-root"></div>
+<script src="{{ url_for('static', filename='js/pixel_editor.js') }}"></script>
+{% endblock %}

@@ -13,3 +13,6 @@ def osProject(): # Creates Route and route function for miniJavaCompiler * NOte 
 @appInstance.route('/rustPythonJIT')
 def rustPyJitComp(): # Creates Route and route function for miniJavaCompiler * NOte Route def must be immiditely after route initialization.
     return render_template('rustPyJit.html')
+@appInstance.route('/pixelEditor')
+def videoGames():
+    return render_template('pixelEditor.html') 
