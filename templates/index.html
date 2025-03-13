@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Joe's Website</title>
+    <title>Home - Joseph Loparco</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+{% block title %}{% endblock %}
 <body>
-    <h1>Hello World!</h1>
+    <nav>
+        <ul class="topnav">
+            <li><a class="active" href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="/miniJavaCompiler">MiniJava</a>
+                    <a href="/embeddedXinuOS">Xinu OS</a>
+                    <a href="/rustPythonJIT">Rust Python</a>
+                    <a href="/pixelEditor">Pixel Editor</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Joseph Loparco</h1>
         
-        <div>
-            <div class="aboutMe"><h3>About me!</h3></div>
-            <p> Hello, My name is Joe. I'm a rising senior at Marquette University who is currently studying Computer Science. I am particularly interested 
+        <div class = "content-div">
+            <div class="aboutMe"><h2>About Me</h2></div>
+            <div class = "underline"></div>
+            <p class = "aboutMeP"> Hello! My name is Joe. I'm a rising senior at Marquette University who is currently studying Computer Science. I am particularly interested 
             in systems and low level programming. Other interests of mine include embedded systems, programing computer games and game devlopment, and Web Design. 
             I a currently am 'On Your Marq' tutor for the Office of Disability Services at Marquette,
             where I'm responsible for teaching and reviewing topics relevant to the Marquette Algorithms course. Beyond this I am also a member of 
@@ -18,18 +35,24 @@
             My favorite and probably the most interesting project I've worked on at my time at Marquette was my MiniJava compiler, another project that im currently working on is the 
             RustPython JIT Compiler, more info coming soon! </p>
             </div>
-        
-            <div class="projects">
+            <div class = "content-div">
             <h2>My Projects</h2>
+            <div class = "underlineLeft"></div>
             <h3>MiniJava Compiler</h3>
-            <A HREF="/miniJavaCompiler">About this Project</A>    
+            <button class = "moreButtons"><A HREF="/miniJavaCompiler">About this Project</A></button>
             <h3>Embedded-Xinu OS</h3>
-            <A HREF="/embeddedXinuOS">About this Project</A>   
+            <button class = "moreButtons"><A HREF="/embeddedXinuOS">About this Project</A></button>
             <h3>Senior Design: RustPython JIT Compiler</h3>
-            <A HREF="/rustPythonJIT">About this Project</A>  
+            <button class = "moreButtons"><A HREF="/rustPythonJIT">About this Project</A></button> 
             <h3>Pixel Editor(WIP)</h3>
-            <A HREF="/pixelEditor">About this Project</A>  
-            <p> </p>
-        </div>
+            <button class = "moreButtons"><A HREF="/pixelEditor">About this Project</A></button>
+            </div>
+            <div class = "content-div">
+            <div class = "resume"><h2>Resume/CV</h2></div>
+            </div>
+
 </body>
+    
+
+</div>
 </html>

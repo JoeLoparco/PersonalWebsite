@@ -5,7 +5,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div>
+    <nav class="topnav">
+        <a href="/">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="/miniJavaCompiler">MiniJava</a>
+        <a class = "active" href="/embeddedXinuOS">Xinu OS</a>
+        <a href="/rustPythonJIT">Rust Python</a>
+        <a href="/pixelEditor">Pixel Editor</a>
+    </nav>
+    <div class = "content-div">
     <h1>Embedded Xinu!!</h1>
         <p> Project Description: : Built various parts of a Xinu-Based operating system in C and some assembly language and implemented it on RISC-V hardware. 
             Significant parts of the OS that were built include serial driver, context switch, proportional process scheduling algorithm and processes scheduler, 

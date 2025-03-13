@@ -1,5 +1,5 @@
 from app import appInstance
-from flask import render_template
+from flask import render_template, send_from_directory
 
 @appInstance.route('/') # Home page 'Route'
 def home(): # Def home function for home page
@@ -16,3 +16,6 @@ def rustPyJitComp(): # Creates Route and route function for miniJavaCompiler * N
 @appInstance.route('/pixelEditor')
 def videoGames():
     return render_template('pixelEditor.html') 
+@appInstance.route('/static/<path:path>') # allows routing to send http request to our static folder(allows us to grab our react componenets)
+def send_static(path):
+    return send_from_directory('static', path)

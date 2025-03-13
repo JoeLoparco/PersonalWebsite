@@ -5,7 +5,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div>
+    <nav class="topnav">
+        <a href="/">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="/miniJavaCompiler">MiniJava</a>
+        <a href="/embeddedXinuOS">Xinu OS</a>
+        <a class = "active" href="/rustPythonJIT">Rust Python</a>
+        <a href="/pixelEditor">Pixel Editor</a>
+    </nav>
+    <div class = "content-div">
     <h1>JIT Compiling</h1>
         <p> Project Description: : Attempitng to Build Various portions of JIT for rustPython(an implementation of the python language in rust). More Updates Coming soon!
             
@@ -14,9 +22,9 @@
 
             <h3>More info on the project below!</h3>
 
-           <h4><A HREF="https://www.cs.mu.edu/~brylow/cosc3250/Spring2024/">GitHUB(Our Team's Project) </A></h4>
-           <h4><A HREF="https://github.com/JoeLoparco/Operating_Systems"> GitHub Project(Community Project)</A></h4>
-            </div>
+           <button class = "githubButtons"><A HREF="https://www.cs.mu.edu/~brylow/cosc3250/Spring2024/">GitHUB(Our Team's Project) </A></button>
+           <button class = "githubButtons"><A HREF="https://github.com/JoeLoparco/Operating_Systems"> GitHub Project(Community Project)</A></button>
+    </div>
         
 </body>
 </html>

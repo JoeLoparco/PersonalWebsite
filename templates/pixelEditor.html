@@ -1,8 +1,27 @@
-{% extends "base.html" %}
-
-{% block title %}Pixel Editor{% endblock %}
-
-{% block content %}
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='pixel_editor.css') }}">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<nav class="topnav">
+  <a href="/">Home</a>
+  <a class = "active" href="/pixelEditor">Pixel Editor</a>
+</nav>
 <div id="pixel-editor-root"></div>
+
+<!-- Add React and ReactDOM from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+
+<!-- Your pixel editor script -->
 <script src="{{ url_for('static', filename='js/pixel_editor.js') }}"></script>
-{% endblock %}
+
+<!-- Add initialization script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.BeginnerPixelEditor) {
+      ReactDOM.render(React.createElement(window.BeginnerPixelEditor), document.getElementById('pixel-editor-root'));
+    } else {
+      console.error("BeginnerPixelEditor component not found");
+    }
+  });
+</script>
