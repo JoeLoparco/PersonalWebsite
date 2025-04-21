@@ -2,17 +2,27 @@
 <html>
 <head>
     <title>Joe's Website ~ Embedded Xinu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav class="topnav">
-        <a href="/">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="/miniJavaCompiler">MiniJava</a>
-        <a class = "active" href="/embeddedXinuOS">Xinu OS</a>
-        <a href="/rustPythonJIT">Rust Python</a>
-        <a href="/pixelEditor">Pixel Editor</a>
+    <nav>
+        <ul class="topnav">
+            <li><a class="active" href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href ="/miniJavaCompiler">MiniJava</a>
+                    <a href ="/embeddedXinuOS">Xinu OS</a>
+                    <a href ="/rustPythonJIT">Rust Python</a>
+                    <a href ="/laptopPrice">Laptop Analysis</a>
+                </div>
+            </li>
+            <li><a class="/" href="/resume">Resume/CV</a></li>
+            <li><a class="/" href="/aboutMe">More About me</a></li>
+        </ul>
     </nav>
+
     <div class = "content-div">
     <h1>Embedded Xinu!!</h1>
         <p> Project Description: : Built various parts of a Xinu-Based operating system in C and some assembly language and implemented it on RISC-V hardware. 
@@ -27,6 +37,17 @@
            <h4><A HREF="https://www.cs.mu.edu/~brylow/cosc3250/Spring2024/">Course Website </A></h4>
            <h4><A HREF="https://github.com/JoeLoparco/Operating_Systems"> GitHub Project(*Not Complete due to IP issues)</A></h4>
             </div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="social-links">
+                        <a href="https://github.com/JoeLoparco" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/joseph-loparco-108532345/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://app.joinhandshake.com/profiles/8td9dw" class="social-link"><i class="fas fa-handshake"></i></i></a>
+                    </div>
+                    <p class="footer-text">&copy; 2025 Joe Loparco. All rights reserved.</p>
+                </div>
+            </footer>
         
 </body>
 </html>

@@ -2,29 +2,73 @@
 <html>
 <head>
     <title>Joe's Website ~ Rust Python JIT Compiler</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav class="topnav">
-        <a href="/">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="/miniJavaCompiler">MiniJava</a>
-        <a href="/embeddedXinuOS">Xinu OS</a>
-        <a class = "active" href="/rustPythonJIT">Rust Python</a>
-        <a href="/pixelEditor">Pixel Editor</a>
+    <nav>
+        <ul class="topnav">
+            <li><a class="active" href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href ="/miniJavaCompiler">MiniJava</a>
+                    <a href ="/embeddedXinuOS">Xinu OS</a>
+                    <a href ="/rustPythonJIT">Rust Python</a>
+                    <a href ="/laptopPrice">Laptop Analysis</a>
+                </div>
+            </li>
+            <li><a class="/" href="/resume">Resume/CV</a></li>
+            <li><a class="/" href="/aboutMe">More About me</a></li>
+        </ul>
     </nav>
+
+
+    <div class = "title-box">RustPython Intepreter - Just In Time Compiler</div>
+
     <div class = "content-div">
-    <h1>JIT Compiling</h1>
-        <p> Project Description: : Attempitng to Build Various portions of JIT for rustPython(an implementation of the python language in rust). More Updates Coming soon!
+    <h1>JIT Compiling !!</h1>
+    <div class = "underlineLong"></div>
+        <p class = "aboutMeP"> Project Description: : Attempitng to Build Various portions of JIT for rustPython(an implementation of the python3 language in rust). More Updates Coming soon!</p>
             
-            <h2>More Coming Soon!<h2>
+            <h2>What is a Just in Time Compiler?</h2>
+            <div class = "underlineLeft"></div>
+            <p class = "aboutMeP"> A Just in Time Compiler is Part of a Larger Interpreter, 
+                an Intepreter typically functions by compiling all code to some tokenized output. This is similar to compiled languages
+                like C and Java. However where Interprters differ from compilers is on the backend, where this tokenized output is then 
+                processed line by line instead of all at once. This is handled by the VM in both the CPython and RustPython Interpreters. 
+                However This Process of Intepreting Code via the VM is often very costly and intorodcues unecesarry overhead as we often spend time 
+                re-intepreting previosuly processed instructions. Just-In-Time Compilers aim to eliminate this overhead by Compiling said frequently 
+                excuted Code into machine code eliminating the overhead. Some More Flushed out JIT Compilers work dynamically like the 
+                CPython Intepreter post 3.13, however the current RustPython Jit works on demand via the .__jit__() flag.
+            </p>
+            <h2>Significant Contributions</h2>
+            <div class = "underlineLeft"></div>
+            <ul class = "bullet">
+                <li class= "bullet">Expanded Arithmetic Operation Support </li>
+                <li class= "bullet">Expanded Control Flow Support </li>
+                <li class= "bullet">Expanded Unit Testing, Adding our own Unit Tests as well as incresing covergae of existing Code</li>
+                <li class= "bullet">Enhanced Optimizations made to bytecode via the addition of simple peephole Optimizations</li>
+                <li class= "bullet">Currently Working on adding a simplified support for Objects(Esentially just Structs with only taits that are 'JIT' Types)</li>
+            </ul>
+            
 
-
-            <h3>More info on the project below!</h3>
-
-           <button class = "githubButtons"><A HREF="https://www.cs.mu.edu/~brylow/cosc3250/Spring2024/">GitHUB(Our Team's Project) </A></button>
-           <button class = "githubButtons"><A HREF="https://github.com/JoeLoparco/Operating_Systems"> GitHub Project(Community Project)</A></button>
+        <h2>More info on the project below!</h2>
+        <div class = "underlineLeft"></div>
+           <button class = "githubButtons"><A HREF="https://github.com/dohear/RustPython">Github (Our Team's Project)</A></button>
+           <button class = "githubButtons"><A HREF="https://github.com/RustPython/RustPython">Github (Original Project)</A></button>
     </div>
         
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/JoeLoparco" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joseph-loparco-108532345/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://app.joinhandshake.com/profiles/8td9dw" class="social-link"><i class="fas fa-handshake"></i></i></a>
+            </div>
+            <p class="footer-text">&copy; 2025 Joe Loparco. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

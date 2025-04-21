@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joe's Website ~ About Me</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+            <li><a class="/" href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href ="/miniJavaCompiler">MiniJava</a>
+                    <a href ="/embeddedXinuOS">Xinu OS</a>
+                    <a href ="/rustPythonJIT">Rust Python</a>
+                    <a href ="/laptopPrice">Laptop Analysis</a>
+                </div>
+            </li>
+            <li><a class="/" href="/resume">Resume/CV</a></li>
+            <li><a class="ative" href="/aboutMe">More About me</a></li>
+        </ul>
+    </nav>
+
+    <div class="ascii-container">
+        <pre class="ascii-art">
+        ___                      _       _                                     
+       |_  |                    | |     | |                                    
+         | | ___  ___  ___ _ __ | |__   | |     ___  _ __   __ _ _ __ ___ ___  
+         | |/ _ \/ __|/ _ \ '_ \| '_ \  | |    / _ \| '_ \ / _` | '__/ __/ _ \ 
+     /\__/ / (_) \__ \  __/ |_) | | | | | |___| (_) | |_) | (_| | | | (_| (_) |
+     \____/ \___/|___/\___| .__/|_| |_| \_____/\___/| .__/ \__,_|_|  \___\___/ 
+                          | |                       | |                        
+                          |_|                       |_|                        
+        </pre>
+    </div>
+
+    <div class = "content-div">
+        <div class="aboutMe"><h1>About Me</h1></div>
+            <div class = "underlineLeft"></div>
+            <p class = "aboutMeP"> Hello! My name is Joe. I'm a currently senior at Marquette University who is currently studying Computer Science. I am particularly interested 
+            in systems and low level programming. Other interests of mine include embedded systems, programing computer games and game devlopment, and Web Design. 
+            I a currently am 'On Your Marq' tutor for the Office of Disability Services at Marquette,
+            where I'm responsible for teaching and reviewing topics relevant to the Marquette Algorithms, Operating Systems and Introduction to Development course. Beyond this I am also a member of 
+            Upsilon Psi Epsilon and as a result have volunteer experience working the undergraduate computer science help desk, 
+            where I was responsible for reviewing topics relevant to Marquette's Introduction to Software Development Course, Object Oriented-Design Course and Data Structures Course. 
+            My favorite and probably the most interesting project I've worked on at my time at Marquette was my MiniJava compiler, another project that im currently working on is the 
+            RustPython JIT Compiler, more info coming soon! </p>
+        <div class="aboutMe"><h1>Technical Interests</h1></div>
+            <div class = "underlineLeft"></div>
+        <div class="aboutMe"><h1>Other Interests</h1></div>
+            <div class = "underlineLeft"></div>
+        <div class="aboutMe"><h1>History</h1></div>
+            <div class = "underlineLeft"></div>
+           
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/JoeLoparco" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joseph-loparco-108532345/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://app.joinhandshake.com/profiles/8td9dw" class="social-link"><i class="fas fa-handshake"></i></i></a>
+            </div>
+            <p class="footer-text">&copy; 2025 Joe Loparco. All rights reserved.</p>
+        </div>
+    </footer>
+        
+</body>
+</html>

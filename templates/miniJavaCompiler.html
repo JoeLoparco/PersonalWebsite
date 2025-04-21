@@ -2,45 +2,80 @@
 <html>
 <head>
     <title>Joe's Website ~ MiniJavaCompiler</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav class="topnav">
-        <a href="/">Home</a>
-        <a href="#projects">Projects</a>
-        <a class = "active" href="/miniJavaCompiler">MiniJava</a>
-        <a href="/embeddedXinuOS">Xinu OS</a>
-        <a href="/rustPythonJIT">Rust Python</a>
-        <a href="/pixelEditor">Pixel Editor</a>
+    <nav>
+        <ul class="topnav">
+            <li><a class="active" href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href ="/miniJavaCompiler">MiniJava</a>
+                    <a href ="/embeddedXinuOS">Xinu OS</a>
+                    <a href ="/rustPythonJIT">Rust Python</a>
+                    <a href ="/laptopPrice">Laptop Analysis</a>
+                </div>
+            </li>
+            <li><a class="/" href="/">Resume/CV</a></li>
+            <li><a class="/" href="/">More About me</a></li>
+        </ul>
     </nav>
+
+    <div class = "title-box">MiniJava Compiler</div>
+
     <div class = "content-div">
-    <h1>MiniJava Compiler</h1>
-        <p> Project Description: Implemented the first three phases of a compiler for Mini
-            Java in Java, a simpler subset of the Java language. This included the
-            construction of a Scanner (Tokenizer), Parser and Semantic Analyzer.
-            
+    <h1>MiniJava</h1>
+    <div class = "underlineLong"></div>
+    <p class = "aboutMeP"> 
+        Project Description: Implemented the first three phases of a compiler for Mini
+        Java in Java, a simpler subset of the Java language. This included the
+        construction of a Scanner (Tokenizer), Parser and Semantic Analyzer.
+    </p>
+    <h2>What is MiniJava? </h2>
+    <div class = "underlineLeft"></div>
+    <p class = "aboutMeP"> 
+        MiniJava is a Smaller Subset of the Java Language Sometimes used to first intorudce students to the concepts of Java. It offer a simple Object Oirented Paradigm than Java 
+        while still supporting key OOP features such as Encapsulation, Overloading and Inheritance although Inhertiance is simplified. Beyond that it supports a basic scope for 
+        variables using access modifiers but not for methods.
+    </p>
     <h2>Phase I - Tokenzier</h2>
-            <p> Implemented a process for scanning a MiniJava fIle and performing tokenization. On an abstract level we did this by building a state machine to represent a DFA(A finite automata where each state only has one out put for evey input). 
+    <div class = "underlineLeft"></div>
+            <p class = "aboutMeP"> Implemented a process for scanning a MiniJava fIle and performing tokenization. On an abstract level we did this by building a state machine to represent a DFA(A finite automata where each state only has one out put for evey input). 
                 Went about implementing this state machine with the use of an enumerator to act as the current state, we then used a state table to map out all possible transtions based on char type. This allowed us to read in each character of the 
                 Java file  while pusing it onto a pushbackreader tracking the state until we reach an accept state(ideally one where we have a valid token) 
                 and then push back the characters stored in our reader to build out the corresponding token, then repeat this process till completed. 
-            `</p>
+            </p>
     <h2>Phase II - Parser</h2>
-            <p> Implemented Parer for MiniJava. To achieve this we first created a Context Free Grammar(CFG) <A HREF="http://minijava.azurewebsites.net/ReferenceManual"> *MiniJava CFG can be found here*</A>
+    <div class = "underlineLeft"></div>
+            <p class = "aboutMeP"> Implemented Parer for MiniJava. To achieve this we first created a Context Free Grammar(CFG) <A HREF="http://minijava.azurewebsites.net/ReferenceManual"> *MiniJava CFG can be found here*</A>
                 We did this via the use of Regualar Expressions in some places where the Grammar was not deterministic due to ambiguity we used a 'lookahead' to help enforce proper MiniJavaGrammar. This 
                 CFG allowed us to parse our previously tokenized output and built out the corresponding objects in our Abstarct Syntax Tree(AST) provided that our tokenized output was derived from gramtically correct 
                 MiniJava input. The result of this Porgram is an AST from which much of the meaning of our Language is derived.       
             </p>
     <h2>Phase III - TypeChecker*</h2>
+    <div class = "underlineLeft"></div>
 
-            <p> Implemented a Process For Performing Sematic Analysis. We Performed Type Chaking Scope Managment and Built Out the Symbol Table.  </p>
+    <p class = "aboutMeP"> Implemented a Process For Performing Sematic Analysis. We Performed Type Chaking Scope Managment and Built Out the Symbol Table.  </p>
 
-            <h3>More info on the project below!</h3>
+    <h3>More info on the project below!</h3>
+    <div class = "underlineLeft"></div>
+    <button class = "githubButtons"><A HREF="https://www.cs.mu.edu/~jforden/Compilers/Fall2024.html">Course Wesbite</A></button>
+    <button class = "githubButtons"><A HREF="https://github.com/RustPython/RustPython">MiniJava Wesbite</A></button>
+    <button class = "githubButtons"><A HREF="https://github.com/RustPython/RustPython">Github</A></button>
+    </div>
 
-           <h4><A HREF="https://www.cs.mu.edu/~jforden/Compilers/Fall2024.html">Course Website </A></h4>
-           <h4><A HREF="http://minijava.azurewebsites.net/ReferenceManual"> More on MiniJava</A></h4>
-           <h4><A HREF="https://github.com/JoeLoparco/MiniJava-Compiler"> GitHub Project(*Not Complete due to IP issues)</A></h4>
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/JoeLoparco" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joseph-loparco-108532345/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://app.joinhandshake.com/profiles/8td9dw" class="social-link"><i class="fas fa-handshake"></i></i></a>
             </div>
+            <p class="footer-text">&copy; 2025 Joe Loparco. All rights reserved.</p>
+        </div>
+    </footer>
         
 </body>
 </html>

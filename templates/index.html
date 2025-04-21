@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Home - Joseph Loparco</title>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 {% block title %}{% endblock %}
@@ -12,47 +13,201 @@
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">Projects</a>
                 <div class="dropdown-content">
-                    <a href="/miniJavaCompiler">MiniJava</a>
-                    <a href="/embeddedXinuOS">Xinu OS</a>
-                    <a href="/rustPythonJIT">Rust Python</a>
-                    <a href="/pixelEditor">Pixel Editor</a>
+                    <a href ="/miniJavaCompiler">MiniJava</a>
+                    <a href ="/embeddedXinuOS">Xinu OS</a>
+                    <a href ="/rustPythonJIT">Rust Python</a>
+                    <a href ="/laptopPrice">Laptop Analysis</a>
                 </div>
             </li>
+            <li><a class="/" href="/resume">Resume/CV</a></li>
+            <li><a class="/" href="/aboutMe">More About me</a></li>
         </ul>
     </nav>
 
-    <h1>Joseph Loparco</h1>
+    <div class = "title-box">Joseph Loparco - Software Engineer & Developer</div>
         
         <div class = "content-div">
-            <div class="aboutMe"><h2>About Me</h2></div>
-            <div class = "underline"></div>
-            <p class = "aboutMeP"> Hello! My name is Joe. I'm a rising senior at Marquette University who is currently studying Computer Science. I am particularly interested 
+            <div class="aboutMe"><h1>About Me</h1></div>
+            <div class = "underlineLeft"></div>
+            <p class = "aboutMeP"> Hello! My name is Joe. I'm a senior at Marquette University who is currently studying Computer Science. I am particularly interested 
             in systems and low level programming. Other interests of mine include embedded systems, programing computer games and game devlopment, and Web Design. 
             I a currently am 'On Your Marq' tutor for the Office of Disability Services at Marquette,
-            where I'm responsible for teaching and reviewing topics relevant to the Marquette Algorithms course. Beyond this I am also a member of 
-            Upsilon Psi Epsilon and as a result have volunteer experience working the undergraduate computer science help desk, 
+            where I'm responsible for teaching and reviewing topics relevant to various Marquette Computer Science Courses including, Algorithms, Operating Systems, and Intorduction to Software Development. 
+            Beyond this I am also a member of Upsilon Pi Epsilon and as a result have volunteer experience working the undergraduate computer science help desk, 
             where I was responsible for reviewing topics relevant to Marquette's Introduction to Software Development Course, Object Oriented-Design Course and Data Structures Course. 
             My favorite and probably the most interesting project I've worked on at my time at Marquette was my MiniJava compiler, another project that im currently working on is the 
             RustPython JIT Compiler, more info coming soon! </p>
             </div>
             <div class = "content-div">
-            <h2>My Projects</h2>
-            <div class = "underlineLeft"></div>
-            <h3>MiniJava Compiler</h3>
-            <button class = "moreButtons"><A HREF="/miniJavaCompiler">About this Project</A></button>
-            <h3>Embedded-Xinu OS</h3>
-            <button class = "moreButtons"><A HREF="/embeddedXinuOS">About this Project</A></button>
-            <h3>Senior Design: RustPython JIT Compiler</h3>
-            <button class = "moreButtons"><A HREF="/rustPythonJIT">About this Project</A></button> 
-            <h3>Pixel Editor(WIP)</h3>
-            <button class = "moreButtons"><A HREF="/pixelEditor">About this Project</A></button>
+                <h1>My Projects</h1>
+                <div class = "underlineLeft"></div>
+                <div class = "inner-content-box">
+                    <h2>MiniJava Compiler</h2>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Compiler Construction</span>
+                        <span class="skill-tag">Object Oriented-Design</span>
+                    </div>
+                    <h4>
+                        Project Description: Implemented the first three phases of a compiler for Mini
+                        Java in Java, a simpler subset of the Java language. This included the
+                        construction of a Scanner (Tokenizer), Parser and Semantic Analyzer.
+                    </h4>
+                    <div class = "button-container">
+                    <button class = "moreButtons"><A HREF="/miniJavaCompiler">About this Project</A></button>
+                    </div>
+                </div>
+                <div class = "inner-content-box">
+                    <h2>Embedded-Xinu OS</h2>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Assembly(RISC-V)</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                    <h4>
+                        Project Description: : Built various parts of a Xinu-Based operating system in C and some assembly language and implemented it on RISC-V hardware. 
+                        Significant parts of the OS that were built include serial driver, context switch, proportional process scheduling algorithm and processes scheduler, 
+                        trap handling system, simple file system, and memory management system. The work done in this project was done in a larger code base. 
+                    </h4>
+                    <button class = "moreButtons"><A HREF="/embeddedXinuOS">About this Project</A></button>
+                </div>
+                <div class = "inner-content-box">
+                    <h2>RustPython JIT Compiler</h2>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">Compiler Construction</span>
+                        <span class="skill-tag">Git/Github</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                    <h4>
+                        Project Description: Implemented the first three phases of a compiler for Mini
+                        Java in Java, a simpler subset of the Java language. This included the
+                        construction of a Scanner (Tokenizer), Parser and Semantic Analyzer.
+                    </h4>
+                    <button class = "moreButtons"><A HREF="/rustPythonJIT">About this Project</A></button> 
+                </div>
+                
+                <div class = "inner-content-box">
+                    <h2>Regression Analysis on laptop Pricing</h2>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Statiscial Analysis & Modeling</span>
+                        <span class="skill-tag">Python (Anaconda)</span>
+                        <span class="skill-tag">Technical Writing</span>
+                        <span class="skill-tag">Data Visualization</span>
+                    </div>
+                    <h4>
+                        Project Description: Aimed to analyze laptop price via the use of several Linar reagression models and create 
+                        a prediction model as well as find out which characteristic had the greatest impact on laptop price.
+                    </h4>
+                    <button class = "moreButtons"><A HREF="/laptopPrice">About this Project</A></button> 
+                </div>
+
+                <div class = "inner-content-box">
+                    <h2>Personal Website</h2>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">CSS/HTML</span>
+                        <span class="skill-tag">UI Design</span>
+                        <span class="skill-tag">Github Pages</span>
+                    </div>
+                    <h4>
+                        Project Description: Created a Personal Website From Scratch in HTML and CSS. Used Flask to host Testing, Hosted Via Github Pages.
+                    </h4>
+                </div>
             </div>
             <div class = "content-div">
-            <div class = "resume"><h2>Resume/CV</h2></div>
+                <div class = "resume"><h1>Resume (Abridged)</h1></div>
+                <div class = "underlineLeft"></div>
+                <div class="skill-category"> 
+                    <h2>Education</h2>
+                    <div class = "underlineLeft"></div>
+                    <h3>Marquette University B.S. Computer Science ~ GPA: 3.60</h3>
+                    <h4>Minor: History</h4>
+                    <h3>Relevant Courses</h3>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag-big">Operating Systems</span>
+                        <span class="skill-tag-big">Compiler Construction</span>
+                        <span class="skill-tag-big">Fundamentals of Artifical Intelligence</span>
+                        <span class="skill-tag-big">Principles of Design</span>
+                        <span class="skill-tag-big">Algorithms</span>
+                        <span class="skill-tag-big">Introduction to Data Science</span>
+                        <span class="skill-tag-big">Real-Time & Embedded Systems</span>
+                        <span class="skill-tag-big">Senior Design</span>
+                        <span class="skill-tag-big">Data Structures</span>
+                        <span class="skill-tag-big">Hardware Systems</span>
+                        <span class="skill-tag-big">Programming Computer Games</span>
+                        <span class="skill-tag-big">Linear Algebra & Matrix Theory</span>
+                        <span class="skill-tag-big">Statistical Mehtods</span>
+                        <span class="skill-tag-big">Discrete Mathematics</span>
+                        <span class="skill-tag-big">Calculus I</span>
+                        <span class="skill-tag-big">Calculus II</span> 
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h2>Skills</h2>
+                    <div class="skills-list">
+                        <div class = "underlineLeft"></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag-big">Java</span>
+                        <span class="skill-tag-big">C</span>
+                        <span class="skill-tag-big">Python</span>
+                        <span class="skill-tag-big">JavaScript</span>
+                        <span class="skill-tag-big">Rust</span>
+                        <span class="skill-tag-big">MATLAB</span>
+                        <span class="skill-tag-big">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Technologies & Tools</h3>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag-big">Compiler Design</span>
+                        <span class="skill-tag-big">Operating Systems</span>
+                        <span class="skill-tag-big">Embedded Systems</span>
+                        <span class="skill-tag-big">Game Development(Unity)</span>
+                        <span class="skill-tag-big">Web Development(React)</span>
+                        <span class="skill-tag-big">Git</span>
+                        <span class="skill-tag-big">Flask</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class = "underlineLeft"></div>
+                    <div class="skills-list">
+                        <span class="skill-tag-big">Mentoring</span>
+                        <span class="skill-tag-big">Problem Solving</span>
+                        <span class="skill-tag-big">Technical Communication</span>
+                        <span class="skill-tag-big">Team Collaboration</span>
+                        <span class="skill-tag-big">Project Management</span>
+                    </div>
+                </div>
+                <button class = "moreButtons"><A HREF="/resume">View Full Resume</A></button>
             </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="social-links">
+                    <a href="https://github.com/JoeLoparco" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/joseph-loparco-108532345/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://app.joinhandshake.com/profiles/8td9dw" class="social-link"><i class="fas fa-handshake"></i></i></a>
+                </div>
+                <p class="footer-text">&copy; 2025 Joe Loparco. All rights reserved.</p>
+            </div>
+        </footer>
 
 </body>
-    
+     
 
 </div>
 </html>

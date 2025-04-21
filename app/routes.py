@@ -19,3 +19,12 @@ def videoGames():
 @appInstance.route('/static/<path:path>') # allows routing to send http request to our static folder(allows us to grab our react componenets)
 def send_static(path):
     return send_from_directory('static', path)
+@appInstance.route('/laptopPrice')
+def laptopanalysis():
+    return render_template('laptopPrice.html')
+@appInstance.route('/aboutMe')
+def aboutMe():
+    return render_template('aboutMe.html')
+@appInstance.route('/resume')
+def resume():
+    return render_template('resume.html')

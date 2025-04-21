@@ -2,9 +2,9 @@ console.log("Pixel Editor JS loaded");
 
 // Define the BeginnerPixelEditor component using global React
 const BeginnerPixelEditor = () => {
-  const [gridSize] = React.useState(16);
+  const [gridSize] = React.useState(8);
   const [selectedColor, setSelectedColor] = React.useState('#000000');
-  const [pixels, setPixels] = React.useState(Array(16 * 16).fill('#FFFFFF'));
+  const [pixels, setPixels] = React.useState(Array(8 * 8).fill('#FFFFFF'));
   const [currentTool, setCurrentTool] = React.useState('draw');
   const [showHelp, setShowHelp] = React.useState(true);
   const [sprites, setSprites] = React.useState({});
@@ -158,7 +158,7 @@ const BeginnerPixelEditor = () => {
   // Convert JSX to React.createElement
   return React.createElement(
     'div',
-    { className: "p-6 bg-gray-100 rounded-lg max-w-4xl" },
+    { className: "pixel-editor" },
     
     // Help Dialog
     showHelp && React.createElement(
@@ -287,40 +287,50 @@ const BeginnerPixelEditor = () => {
       
       // Column 2: Drawing Area
       React.createElement(
-        'div',
-        null,
+        'div', 
+        { className: "drawing-column" },
+        React.createElement(
+          'h3',
+          {},
+          "Drawing Area",
+          currentSpriteName && ` - ${currentSpriteName}`
+        ),
         React.createElement(
           'div',
-          { className: "mb-4" },
-          React.createElement(
-            'h3',
-            { className: "text-lg font-bold mb-2" },
-            "Drawing Area",
-            currentSpriteName && ` - ${currentSpriteName}`
-          ),
-          React.createElement(
+          {
+            className: "grid-container",
+            style: {
+              display: 'grid',
+              gridTemplateColumns: `repeat(${gridSize}, 48px)`, // Larger cells
+              gridTemplateRows: `repeat(${gridSize}, 48px)`,    // Larger cells
+              gap: '1px',
+              backgroundColor: '#e0e0e0',
+              border: '1px solid #ccc',
+              margin: '0 auto'
+            }
+          },
+          pixels.map((color, i) => React.createElement(
             'div',
             {
-              className: "inline-grid bg-gray-200 p-1 rounded",
-              style: {
-                display: 'grid',
-                gridTemplateColumns: `repeat(${gridSize}, 24px)`,
-                gap: '1px',
-                width: 'max-content'
-              }
-            },
-            pixels.map((color, i) => React.createElement(
-              'div',
-              {
-                key: i,
-                className: "w-6 h-6 cursor-pointer block",
-                style: { backgroundColor: color },
-                onClick: () => handlePixelClick(i)
-              }
-            ))
-          )
+              key: i,
+              className: "pixel",
+              style: { 
+                backgroundColor: color,
+                width: '100%',
+                height: '100%'
+              },
+              onClick: () => handlePixelClick(i)
+            }
+          ))
         ),
         
+        // Buttons
+        React.createElement(
+          'div',
+          { className: "buttons-container" },
+          // Your Save and Export buttons
+        )
+      ),
         // Buttons
         React.createElement(
           'div',
